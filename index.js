@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Markdwown for readme
-const readmeFile = ({title, badge, licenseLink, description, installation, usage, license, contribute, tests, email, github})=>
+const readmeFile = ({title, description, installation, usage, license, contribute, tests, email, github})=>
    
 `# ${title}     
 
@@ -31,8 +31,6 @@ ${usage}
 ---
 # License \n
 ${licenseLinkCheck(license)} 
-
-TO DO : notice is added to the section of the README entitled License that explains which license the application is covered under
 ---
 # Contributing \n
 ${contribute}
@@ -53,20 +51,40 @@ const questions = ['What is the title of your project?', 'Please enter a descrip
 ,'Please select a license','Please enter contributing guidelines', 'What commands are needed to test this app?',
 'Please enter your email address','Please enter your Github username',];
 
+
+//create badge for selected license
 function licenseBadge (licenseCheck) {
   let badge = '';
   if (licenseCheck === 'MIT'){
-    badge= 'https://img.shields.io/badge/License-MIT-yellow.svg';
-    return badge;
+    badge= '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
   }
-};    
-
+  else if (licenseCheck === 'Apache license 2.0'){
+    badge= '![License: Apache 2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+  }
+  else if (licenseCheck === 'The Unlicense'){
+    badge= '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
+  }
+  else if (licenseCheck === 'Mozilla Public License 2.0'){
+    badge= '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)';
+  }
+  return badge;
+zz};    
+//create notice for selected license
 function licenseLinkCheck (licenseCheck) {
   let licenseLink = '';
   if (licenseCheck === 'MIT'){
     licenseLink = 'https://choosealicense.com/licenses/mit/';
-    return licenseLink;
   }
+  else if (licenseCheck === 'Apache license 2.0'){
+    licenseLink= 'https://opensource.org/licenses/Apache-2.0/';
+  }
+  else if (licenseCheck === 'The Unlicense'){
+    licenseLink= 'http://unlicense.org/';
+  }
+  else if (licenseCheck === 'Mozilla Public License 2.0'){
+    licenseLink= 'https://opensource.org/licenses/MPL-2.0/';
+  }
+  return licenseLink;
 };   
 
 
@@ -125,7 +143,7 @@ inquirer
         type: 'rawlist',
         message: licensePrompt,
         name: 'license',
-        choices: [ "Apache license 2.0", "GNU General Public License v3.0", "MIT","BSD 2-clause Simplified license", "Boost Software License 1.0", "Mozilla Public License 2.0","Eclipse Public License 2.0","The Unlicense"],
+        choices: [ "Apache license 2.0", "The Unlicense", "MIT","Mozilla Public License 2.0",],
         validate: (answer)=>{
           if(answer === 'Yes'){
               return true;

@@ -1,12 +1,12 @@
-# dsf     
+# readme generator     
 
-# License : MIT https://img.shields.io/badge/License-MIT-yellow.svg
+# License : The Unlicense ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)
  
 # 
 ---
 # Description 
 
-sdf
+This applocation genearates readme for user containing information user wanted to inpt
 ---
 # Table of content 
 
@@ -24,22 +24,20 @@ s
 # Installation 
 
 
-dsf
+you need to download inquerer and node
 ---
 
 # Usage 
 
-sdf
+once questions promted enter deatail you want to enter
 ---
 # License 
 
-https://choosealicense.com/licenses/mit/ 
-
-TO DO : notice is added to the section of the README entitled License that explains which license the application is covered under
+http://unlicense.org/ 
 ---
 # Contributing 
 
-
+gdfgfdg
 ---
 # Tests 
 
@@ -49,7 +47,7 @@ undefined
 ---
 # Questions 
 
-If you have any additional questions you can reach me at . 
+If you have any additional questions you can reach me at jelena.rogic"gmail.com. 
 
-Link to my Github profile: https://github.com/
+Link to my Github profile: https://github.com/JelenaRog
 
