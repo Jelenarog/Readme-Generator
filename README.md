@@ -1,7 +1,8 @@
-# sd     
+# dsf     
 
-# License :MIT [Github license]()
-# undefined
+# License : MIT https://img.shields.io/badge/License-MIT-yellow.svg
+ 
+# 
 ---
 # Description 
 
@@ -10,7 +11,7 @@ sdf
 # Table of content 
 
 * [Installation](#installation)
-
+s
 * [Usage](#usage) 
 
 * [Contribute](#contributing) 
@@ -23,16 +24,16 @@ sdf
 # Installation 
 
 
-
+dsf
 ---
 
 # Usage 
 
-
+sdf
 ---
 # License 
 
-
+https://choosealicense.com/licenses/mit/ 
 
 TO DO : notice is added to the section of the README entitled License that explains which license the application is covered under
 ---

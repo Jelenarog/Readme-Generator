@@ -7,8 +7,9 @@ const readmeFile = ({title, badge, licenseLink, description, installation, usage
    
 `# ${title}     
 
-# License : ${license} [Github license]()
-# ${badge}
+# License : ${license} ${licenseBadge(license)}
+ 
+# 
 ---
 # Description \n
 ${description}
@@ -29,7 +30,7 @@ ${installation}
 ${usage}
 ---
 # License \n
-${licenseLink} 
+${licenseLinkCheck(license)} 
 
 TO DO : notice is added to the section of the README entitled License that explains which license the application is covered under
 ---
@@ -52,14 +53,23 @@ const questions = ['What is the title of your project?', 'Please enter a descrip
 ,'Please select a license','Please enter contributing guidelines', 'What commands are needed to test this app?',
 'Please enter your email address','Please enter your Github username',];
 
-(licenseBadge) =>{
+function licenseBadge (licenseCheck) {
   let badge = '';
-  let licenseLink = '';
-  if (licenseBadge === 'MIT'){
-    badge= '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-    licenseLink = 'https://choosealicense.com/licenses/mit/';
+  if (licenseCheck === 'MIT'){
+    badge= 'https://img.shields.io/badge/License-MIT-yellow.svg';
+    return badge;
   }
-}                                      
+};    
+
+function licenseLinkCheck (licenseCheck) {
+  let licenseLink = '';
+  if (licenseCheck === 'MIT'){
+    licenseLink = 'https://choosealicense.com/licenses/mit/';
+    return licenseLink;
+  }
+};   
+
+
 
 // TODO: Create a function to initialize app
 function init() {
@@ -157,9 +167,10 @@ inquirer
    
     fs.writeFile('README.md', readmeContent, (err) =>
     err ? console.error(err) : console.log('You have successfully created a README file!')
-    
+
 
     );
+    
   }
   );
 }
