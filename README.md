@@ -15,17 +15,15 @@ This application creates a quality readme with user's input. Once user starts th
 # Usage 
 
 ![User-Story](./Assets/Images/User-story.png)
+# Demo
 
-# Demo 
+ https://drive.google.com/file/d/1c0sdbjmtt5m_zRliYYW2-mMacstWLCJ8/view
 
-![Demo](https://drive.google.com/file/d/1c0sdbjmtt5m_zRliYYW2-mMacstWLCJ8/view)
 # License 
 
 This application is covered under MIT, to find more information about it click on https://choosealicense.com/licenses/mit/. 
 # Contributing 
 #### N/A
-
-x
 # Tests 
 
 The following is needed to run the rest:
